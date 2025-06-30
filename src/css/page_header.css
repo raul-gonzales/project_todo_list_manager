@@ -1,0 +1,12 @@
+/* ---- Page Header ---- */
+#header-main {
+  grid-area: header;
+  background-color: var(--fourth);
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+  display: grid;
+  place-items: center;
+  height: auto;
+}
