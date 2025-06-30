@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
+@import url("../css/modal.css");
+@import url("../css/page_header.css");
+@import url("../css/project.css");
+@import url("../css/task.css");
+
+
+/* Theme 1: Ocean breeze */
+:root {
+  --first: #d9ed92;
+  --second: #b5e48c;
+  --third: #99d98c;
+  --fourth: #49a078;
+  --fifth: #008c8c;
+  --sixth: #2a9d8f;
+  --seventh: #0077b6;
+  --eighth: #005f99;
+  --ninth: #003f7f;
+  --tenth: #162447;
+}
+
+/* ---- Global Styles ---- */
+* {
+  font-family: "Macondo", cursive;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--fifth);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "projects tasks";
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  grid-template-rows: 80px auto;
+
+  background: linear-gradient(
+    to bottom right,
+    var(--first),
+    var(--second),
+    var(--third),
+    var(--fourth),
+    var(--fifth),
+    var(--sixth),
+    var(--seventh)
+  );
+}
