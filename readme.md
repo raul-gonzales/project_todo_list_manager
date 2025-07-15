@@ -40,10 +40,10 @@ Features include localStorage for persistence, filters for sorting tasks, priori
   - [x] ~~Utilize DevTools for debugging.~~
   - [x] ~~Refactor code for clarity and efficiency.~~
 
-- [x] **Final Touches**
-  - [x] Polish the UI with CSS for a clean, intuitive design.
-  - [x] Add animations or transitions for better UX.
-  - [x] Ensure responsiveness for different screen sizes.
+- [x] ~~**Final Touches**~~
+  - [x] ~~Polish the UI with CSS for a clean, intuitive design.~~
+  - [x] ~~Add animations or transitions for better UX.~~
+  - [x] ~~Ensure responsiveness for different screen sizes.~~
 
-- [x] **Deployment & Feedback**
-  - [x] Host the project on GitHub Pages or Netlify.
+- [x] ~~**Deployment & Feedback**~~
+  - [x] ~~Host the project on GitHub Pages or Netlify.~~
