@@ -350,6 +350,14 @@ elements.addProjectForm.addEventListener("submit", (event) => {
     alert("Project name is required.");
     return;
   }
+  if (title.length > 100) {
+    alert("Title must be 100 characters or fewer.");
+    return;
+  }
+  if (description.length > 500) {
+    alert("Description must be 500 characters or fewer.");
+    return;
+  }
 
   const newProject = projectService.createProject(
     title,
@@ -372,6 +380,14 @@ elements.editProjectForm.addEventListener("submit", (event) => {
   const updatedTitle = editProjectFields.name.value.trim();
   if (!updatedTitle) {
     alert("Project name is required.");
+    return;
+  }
+  if (title.length > 100) {
+    alert("Title must be 100 characters or fewer.");
+    return;
+  }
+  if (description.length > 500) {
+    alert("Description must be 500 characters or fewer.");
     return;
   }
 
@@ -411,6 +427,14 @@ elements.addTaskForm.addEventListener("submit", (event) => {
     alert("Task name is required.");
     return;
   }
+  if (title.length > 100) {
+    alert("Title must be 100 characters or fewer.");
+    return;
+  }
+  if (description.length > 500) {
+    alert("Description must be 500 characters or fewer.");
+    return;
+  }
 
   const description = document
     .getElementById("add-task-description")
@@ -433,6 +457,14 @@ elements.editTaskForm.addEventListener("submit", (event) => {
   const updatedTitle = editTaskFields.name.value.trim();
   if (!updatedTitle) {
     alert("Task name is required.");
+    return;
+  }
+  if (title.length > 100) {
+    alert("Title must be 100 characters or fewer.");
+    return;
+  }
+  if (description.length > 500) {
+    alert("Description must be 500 characters or fewer.");
     return;
   }
 
@@ -474,6 +506,5 @@ elements.closeEditTaskModalButton.addEventListener("click", () =>
 function closeModal(modal) {
   modal.remove(); // Remove the modal from the DOM
 }
-
 
 export { renderProjects, renderTasks };
