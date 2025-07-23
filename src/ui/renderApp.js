@@ -378,22 +378,23 @@ elements.editProjectForm.addEventListener("submit", (event) => {
   if (!currentProjectId) return;
 
   const updatedTitle = editProjectFields.name.value.trim();
+  const updatedDescription = editProjectFields.description.value.trim();
   if (!updatedTitle) {
     alert("Project name is required.");
     return;
   }
-  if (title.length > 100) {
+  if (updatedTitle.length > 100) {
     alert("Title must be 100 characters or fewer.");
     return;
   }
-  if (description.length > 500) {
+  if (updatedDescription.length > 500) {
     alert("Description must be 500 characters or fewer.");
     return;
   }
 
   const updatedData = {
     title: updatedTitle,
-    description: editProjectFields.description.value.trim(),
+    description: updatedDescription,
     dueDate: editProjectFields.date.value,
     priority: editProjectFields.priority.value,
   };
@@ -455,23 +456,26 @@ elements.addTaskForm.addEventListener("submit", (event) => {
 elements.editTaskForm.addEventListener("submit", (event) => {
   event.preventDefault();
   if (!currentTaskId) return;
+
   const updatedTitle = editTaskFields.name.value.trim();
+  const updatedDescription = editTaskFields.description.value.trim();
+
   if (!updatedTitle) {
     alert("Task name is required.");
     return;
   }
-  if (title.length > 100) {
+  if (updatedTitle.length > 100) {
     alert("Title must be 100 characters or fewer.");
     return;
   }
-  if (description.length > 500) {
+  if (updatedDescription.length > 500) {
     alert("Description must be 500 characters or fewer.");
     return;
   }
 
   const updatedData = {
     title: updatedTitle,
-    description: editTaskFields.description.value.trim(),
+    description: updatedDescription,
     dueDate: editTaskFields.date.value,
     priority: editTaskFields.priority.value,
   };
