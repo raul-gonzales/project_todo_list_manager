@@ -423,6 +423,13 @@ elements.addTaskForm.addEventListener("submit", (event) => {
   }
 
   const title = document.getElementById("add-task-name").value.trim();
+
+  const description = document
+    .getElementById("add-task-description")
+    .value.trim();
+  const dueDate = document.getElementById("add-task-date").value;
+  const priority = document.getElementById("add-task-priority").value;
+
   if (!title) {
     alert("Task name is required.");
     return;
@@ -435,12 +442,6 @@ elements.addTaskForm.addEventListener("submit", (event) => {
     alert("Description must be 500 characters or fewer.");
     return;
   }
-
-  const description = document
-    .getElementById("add-task-description")
-    .value.trim();
-  const dueDate = document.getElementById("add-task-date").value;
-  const priority = document.getElementById("add-task-priority").value;
 
   const newTask = taskService.createTask(title, description, dueDate, priority);
   projectService.addTaskToProject(currentProjectId, newTask.id); // Link task to project
